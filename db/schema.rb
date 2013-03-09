@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(:version => 20130308173447) do
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "likes", :force => true do |t|
-    t.boolean  "value"
     t.integer  "post_id"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
