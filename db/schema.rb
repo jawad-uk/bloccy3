@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130308173447) do
 
-  create_table "authors", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password"
-    t.text     "bio"
-    t.string   "website"
-    t.string   "twitter"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "comments", :force => true do |t|
     t.text     "comment"
     t.date     "comment_date"

@@ -1,0 +1,15 @@
+		Bloccy3::Application.routes.draw do
+
+		resources :posts do
+		  resources :comments, :likes
+		end
+		  
+		resources :users do
+		  resources :comments
+		end
+
+		resources :authors do
+		  resources :posts
+		end
+
+		end
