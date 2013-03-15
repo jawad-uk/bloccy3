@@ -5,10 +5,9 @@ class CreatePosts < ActiveRecord::Migration
       t.text :body
       t.string :tag
       t.date :published_date
-      t.references :author
 
       t.timestamps
     end
-    add_index :posts, :author_id
+    add_index :posts, :user_id
   end
 end
