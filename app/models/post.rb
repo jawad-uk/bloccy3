@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
-  belongs_to :author
-  attr_accessible :body, :published_date, :tag, :title, :author_id
+  belongs_to :user
   has_many :comments
   has_many :likes
+  attr_accessible :body, :published_date, :tag, :title
 end
