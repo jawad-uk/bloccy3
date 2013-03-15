@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :body
       t.string :tag
       t.date :published_date
+      t.references :user
 
       t.timestamps
     end
