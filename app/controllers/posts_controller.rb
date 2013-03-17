@@ -13,5 +13,6 @@ class PostsController < ApplicationController
 	end
 
   def show
+    @post = Post.(:post_id)
   end
 end

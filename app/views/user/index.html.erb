@@ -1,2 +1,9 @@
-<h1>View all users</h1>
-<p>Find me in app/views/user/index.html.erb</p>
+<h1>Users</h1>
+
+<%= @users.each do |user| %>
+	<div class="user">
+		<span class="name">
+			<%= link_to user.name, user %>
+		</span>
+		(<%= user.posts.count %>)
+	</div>
