@@ -1,9 +1,12 @@
 <h1>Users</h1>
 
-<%= @users.each do |user| %>
-	<div class="user">
-		<span class="name">
-			<%= link_to user.name, user %>
-		</span>
-		(<%= user.posts.count %>)
-	</div>
+<div class="users">
+	<%= @users.each do |user| %>
+		<div class="user">
+			<span class="name" >
+				<%= link_to user.name, user %>
+			</span> 
+			(<%= user.posts.count %>)
+		</div>
+	<% end %>
+</div>

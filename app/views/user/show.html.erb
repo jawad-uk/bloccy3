@@ -1,2 +1,13 @@
-<h1>View a user profile</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<h1><%= @user.name %></h1>
+<h2><%= @user.email %></h2>
+
+<h3>Articles</h3>
+	<div class ="posts">
+		<%= @user.posts.each do | movie | %>
+			<div class="post">
+				<span><%= link_to post.title, post.tag %></span> (<%= post.published_date %>)
+			</div>
+		<% end %>
+	</div>
+
+
