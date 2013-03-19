@@ -1,12 +1,4 @@
-<h1>Users</h1>
+<h2>View all users</h2>
 
-<div class="users">
-	<%= @users.each do |user| %>
-		<div class="user">
-			<span class="name" >
-				<%= link_to user.name, user %>
-			</span> 
-			(<%= user.posts.count %>)
-		</div>
-	<% end %>
-</div>
+<%= link_to "add new user", "user/new" %>
+<%= link_to 'Blog home', "/" %>

@@ -1,18 +1,5 @@
-<h1>Add a new user</h1>
+<h2>Add a new user</h2>
 
-<%= form_for @user do | f | %>
-	<p>
-		<%= f.label :name %><br/>
-		<%= f.text_field :name %>
-	</p>
+<%= link_to 'Blog home', "/" %>
 
-	<p>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-	</p>
 
-	<p>
-		<%= f.submit "Submit new user" %>
-	</p>
-
-<% end %>

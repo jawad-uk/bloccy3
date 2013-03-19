@@ -1,5 +1,30 @@
-<h1>Bloc Head: Official Blog</h1>
+<h2>All articles</h2>
 
-<div class = "blogposts">
-<p><%= @posts %></p>
-</div>
+<%= link_to "new post", "posts/new" %>
+<%= link_to "view all users", "user" %>
+
+<table>
+	<tr>
+		<th>Author</th>
+		<th>Title</th>
+		<th>Tags:</th>
+		<th>Body</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.user_id %></td>
+		<td><%= post.title %></td>
+		<td><%= post.tag %></td>
+		<td><%= post.body %></td>
+		<td><%= link_to 'View post', post %></td>
+		<td><%= link_to 'Edit post', edit_post_path(post) %></td>
+		<td><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></td>
+	</tr>
+	<% end %>
+</table>
+
+<br />
