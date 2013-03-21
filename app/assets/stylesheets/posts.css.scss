@@ -1,3 +1,63 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$bg-color: #131414;
+$main-font: Arial, Helvetica, sans-serif;
+
+* {
+	font-weight: 100;
+		letter-spacing: -1px;
+}
+
+h1 {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	font-family: $main-font;
+	font-size: 3em;
+	color: #fff;
+	line-height: 24px;
+}
+
+h2 {
+	color: #00FFFF;
+	font-family: $main-font;
+}
+
+#all_posts {
+	color: #FFFF00;
+	font-family: $main-font;
+}
+
+html { 
+	background-color: $bg-color;
+}
+
+#content {
+	background-color: $bg-color;
+	position: fixed;
+	width: 50%;
+	left: 25%;
+	height: 100%;
+	top: 0px;
+	padding: 40px;
+}
+
+#all_posts {
+	margin-top: 25px;
+}
+
+#link_button {
+	font-family: $main-font;
+	position: relative;
+	margin: 50px;
+	margin-left: 120px;
+	background-color: #00FFFF;
+	width: 100px;
+	padding: 10px;
+	border-radius: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+}

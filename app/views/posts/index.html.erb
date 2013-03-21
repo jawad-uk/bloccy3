@@ -1,9 +1,6 @@
 <h2>All articles</h2>
 
-<%= link_to "new post", "posts/new" %>
-<%= link_to "view all users", "user" %>
-
-<table>
+<table id="all_posts">
 	<tr>
 		<th>Author</th>
 		<th>Title</th>
@@ -28,3 +25,10 @@
 </table>
 
 <br />
+
+<div id="link_button">
+<%= link_to "new post", "posts/new" %>
+</div>
+<div id="link_button">
+<%= link_to "view all users", "user" %>
+</div>
