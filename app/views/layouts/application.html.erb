@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bloccy3</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div id="content">	
-<h1>Bloc Head: Official Blog</h1>
-
-<%= yield %>
-
-</div>
-</body>
+	<head>
+	  <title>Bloccy3</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">Bloc Head</a>
+					<div class ="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li class="active"><a href="#">Articles</a></li>
+							<li class="active"><a href="#">About</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content">	
+		<%= yield %>
+		</div>
+	</body>
 </html>
