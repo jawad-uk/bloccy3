@@ -4,28 +4,7 @@
 
 			<h2>All articles</h2>
 
-			<table id="all_posts">
-				<tr>
-					<th>Author</th>
-					<th>Title</th>
-					<th>Tags:</th>
-					<th>Body</th>
-					<th></th>
-					<th></th>
-					<th></th>
-				</tr>	
-				<% @posts.each do |post| %>
-				<tr>
-					<td><%= post.user_id %></td>
-					<td><%= post.title %></td>
-					<td><%= post.tag %></td>
-					<td><%= post.body %></td>
-					<td><%= link_to 'View post', post %></td>
-					<td><%= link_to 'Edit post', edit_post_path(post) %></td>
-					<td><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></td>
-				</tr>
-				<% end %>
-			</table>
+			<%= render 'posts' %>
 			
 			<br />
 		</div>

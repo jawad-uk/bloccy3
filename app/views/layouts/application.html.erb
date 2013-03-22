@@ -8,22 +8,9 @@
 	</head>
 	
 	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href="#">Bloc Head</a>
-					<div class ="nav-collapse collapse">
-						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li class="active"><a href="#">Articles</a></li>
-							<li class="active"><a href="#">About</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+		<%= render :partial => "layouts/navbar" %>
 		<div id="content">	
-		<%= yield %>
+			<%= yield %>
 		</div>
 	</body>
 </html>
