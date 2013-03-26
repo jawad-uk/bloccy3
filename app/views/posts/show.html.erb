@@ -5,16 +5,16 @@
 		<p><%= @post.tag %></p>
 		<p><%= @post.body %></p>
 
-		<%= form_for @post do |f| %>
-			<%= f.fields_for :comments do |comment| %>
+		<%= f.fields_for :comments, @new_comment do |comment| %>
 				<%= comment.label :comment, "Comment" %>
 				<%= comment.text_area :comment %>
 			<% end %>
 
 			<%= f.submit "Submit comment" %>
 		<% end %>
-		<%= link_to 'Blog home', "/" %>
-		<%= link_to 'Edit post', "posts/edit" %>
+
+		<%= link_to 'Blog home', root_path %>
+		<%= link_to 'Edit post', edit_post_path(@post) %>
 		<%= link_to 'Delete post', @post, :confirm => 'Please confirm you want to delete?', :method => :delete %>
 	</div>
 </div>
