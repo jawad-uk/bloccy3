@@ -1,12 +1,12 @@
 Bloccy3::Application.routes.draw do
 
 resources :posts 
-resources :users
-# resources :users do 
-#     resources :posts, only: [:index, :show]
-#     resources :comments
-#   end
-# end
+
+ resources :users do 
+    resources :posts, only: [:index, :show]
+    resources :comments
+  end
+
 
 root :to => 'posts#index'
 
