@@ -7,6 +7,7 @@ resources :posts
     resources :comments
   end
 
+match '/about' => 'public#about'
 
 root :to => 'posts#index'
 
