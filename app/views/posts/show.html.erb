@@ -5,7 +5,7 @@
 		<p><%= @post.tag %></p>
 		<p><%= @post.body %></p>
 		
-		<%= render @comments %>	
+		<%= render :partial => "comment", :collection => @comments %>	
 
 		<%= form_for @post do |f| %>
 			<%= fields_for :comments, @new_comment do |comment| %>
