@@ -7,4 +7,6 @@ class Post < ActiveRecord::Base
   validates_presence_of :body, :title
   validates_length_of :title, maximum: 140
   scope :recent, order('created_at desc').limit(4)
+
+  # before_destroy :set_deleted_flag
 end

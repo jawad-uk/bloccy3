@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :posts
   validates_presence_of :name, :email, :password
   scope :recently_active, User.comments.order("created_at DESC")
+  # after_create : send_email
+  # before_save :encrypt_password
 end
 
 
