@@ -6,4 +6,5 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :comments
   validates_presence_of :body, :title
   validates_length_of :title, maximum: 140
+  scope :recent, order('created_at desc').limit(4)
 end
