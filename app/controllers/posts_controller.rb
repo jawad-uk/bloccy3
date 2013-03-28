@@ -33,19 +33,19 @@ class PostsController < ApplicationController
     end
 	end
 
- def show
+  def show
     @post = Post.find(params[:id])
-    @new_comment = @post.comments.build
+    @new_comment = Comment.new
     @comments = @post.comments
   end
 
   def destroy
-    @user = User.find(params[:id])
-    if @user.destroy
-        redirect_to users_path
+    @post = Post.find(params[:id])
+    if @post.destroy
+        redirect_to posts_path
     else
-        flash[:error] = "Error deleting user"
-        redirect_to @user
+        flash[:error] = "Error deleting post"
+        redirect_to @post
     end
   end
 end

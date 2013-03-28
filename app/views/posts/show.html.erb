@@ -8,11 +8,11 @@
 		<%= render :partial => "comment", :collection => @comments %>	
 
 		<%= form_for @post do |f| %>
-			<%= fields_for :comments, @new_comment do |comment| %>
+			<%= f.fields_for :comments, @new_comment do |comment| %>
 					<%= comment.label :comment, "Comment" %>
 					<%= comment.text_field :comment %>
-					<%= comment.submit "Submit comment" %>
 			<% end %>
+			<%= f.submit "Submit comment" %>
 		<% end %>
 
 		<%= link_to 'Blog home', root_path %>
