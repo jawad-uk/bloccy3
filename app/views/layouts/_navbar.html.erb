@@ -9,8 +9,12 @@
 							<li class="active"><a href=<%= users_path%>>Community</a></li>
 							<li class="active"><a href=<%= about_path  %>>About</a></li>
 							<li class="active"><a href=<%= new_user_path %>>Sign up</a></li>
-							<li class="active"><a href="#">Sign in</a></li>
 						</ul>
+						<form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn btn-primary" id="signin_button">Sign in</button>
+          	</form>
 					</div>
 				</div>
 			</div>
