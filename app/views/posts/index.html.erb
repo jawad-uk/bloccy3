@@ -1,20 +1,7 @@
-<div class="row-fluid">
-	<div class="span6 offset3">
-		<div id="articles">
-			<h2>All articles</h2>
-				<table id="all_posts">
-					<tr>
-						<th>Author</th>
-						<th>Title</th>
-						<th>Tags:</th>
-						<th>Body</th>
-						<th></th>
-						<th></th>
-						<th></th>
-					</tr>	
-						<%= render :partial => "post", :collection => @posts %>
-				</table>
-					<br />
-		</div>
-	</div>	
+<div id="articles">
+			<section>
+				<article>
+				<%= render :partial => "post", :collection => @posts %>
+				</article>
+			</section>
 </div>

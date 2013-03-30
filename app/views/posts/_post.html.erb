@@ -1,9 +1,8 @@
-<tr>
-	<td><%= post.user_id %></td>
-	<td><%= post.title %></td>
-	<td><%= post.tag %></td>
-	<td><%= post.body %></td>
-	<td><%= link_to 'View post', post %></td>
-	<td><%= link_to 'Edit post', edit_post_path(post) %></td>
-	<td><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></td>
-</tr>
+	<h2><%= link_to post.title, post %><h2>
+	<h2><small><%= link_to  post.created_at.strftime("%B %d, %Y"), post %></small></h2>
+	<%= link_to image_tag("http://placehold.it/540x300"), post %>
+	<p><%= link_to post.body[0...200]+"...", post %></p>
+
+	<a class="text-success"><%= link_to 'View post', post %></a>
+	<a class="text-warning"><%= link_to 'Edit post', edit_post_path(post) %></a>
+	<a class="text-error"><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></a>

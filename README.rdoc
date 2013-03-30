@@ -1,1 +1,19 @@
 Simple blog app developed in Ruby and Rails as part of Bloc.io Winter 2013 Rails cohort
+
+Todos: 
+	Posts
+		- fix issue with comments on show page
+
+	Users
+		- add sign in & authentication
+
+	Comments
+		- fix controller
+		- fix functionality in posts view
+
+
+	Likes
+		- set them up from scratch
+
+	Public
+		- quick fix of about page

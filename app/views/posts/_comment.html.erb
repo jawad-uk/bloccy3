@@ -1,1 +1,10 @@
-<p><%= comment.comment %></p>
+<div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="http://placehold.it/50x50">
+    </a>
+    <h6 class="media-body"><%= comment.comment %></h6>
+    <h6><small>1st Feb 2013</small><h6>
+  </div><!--close media id="comment"-->
+
+	<button class="btn"><%= link_to 'Edit comment', edit_post_comment_path(comment) %></button>
+	<button class="btn"><%= link_to 'Delete comment', post_comment_path, :confirm => 'Please confirm you want to delete?', :method => :delete %></button>

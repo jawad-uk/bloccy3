@@ -1,11 +1,13 @@
 Bloccy3::Application.routes.draw do
 
-resources :posts 
+resources :posts do
+  resources :comments
+end
 
- resources :users do 
-    resources :posts, only: [:index, :show]
-    resources :comments
-  end
+
+resources :users do 
+  resources :posts, only: [:index, :show]
+end
 
 match '/about' => 'public#about'
 
