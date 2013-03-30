@@ -1,12 +1,15 @@
+<% @post.tags.build %>
+
 <%= form_for @post do |f| %>	
 	<%= f.label :title %>
 	<%= f.text_field :title %>
 
-	<%= f.label :tag %>
-	<%= f.text_field :tag %>
-
 	<%= f.label :body %>
 	<%= f.text_area :body %>
+
+	<h4>Tags</h4>
+	<%= render :partial => 'tags/form',
+						 :locals => {:form => f} %>
 
 	<br />
 	<%= f.submit "Publish" %>

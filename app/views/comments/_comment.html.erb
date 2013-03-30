@@ -1,0 +1,13 @@
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="http://placehold.it/50x50">
+  </a>
+  <h6 class="media-body"><%= comment.comment %></h6>
+  <h6><small><% comment.created_at.strftime("%B %d, %Y") %></small><h6>
+</div>
+
+<p class="admin_links">
+	<%= link_to 'Delete Comment', [comment.post, comment],
+							:confirm => 'Are you sure?',
+							:method => :delete %>
+</p>

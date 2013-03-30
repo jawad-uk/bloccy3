@@ -1,23 +1,27 @@
 <article>
-	<h2><%= @post.title %><h2>
-	<h2><small><%= @post.created_at.strftime("%B %d, %Y") %></small></h2>
-	<%= image_tag("http://placehold.it/540x300") %>
-	<p><%= @post.body[0...200]+"..." %></p>
+	<div class="body">
+		<h2><%= @post.title %><h2>
+		<h2><small><%= @post.created_at.strftime("%B %d, %Y") %></small></h2>
+		<%= image_tag("http://placehold.it/540x300") %>
+			<p><%= @post.body %></p>
 
-	<a class="text-warning"><%= link_to 'Edit post', edit_post_path(@post) %></a>
-	<a class="text-error"><%= link_to 'Delete post', post_path, :confirm => 'Please confirm you want to delete?', :method => :delete %></a>
+			<p><b>Tags: </b><%= join_tags(@post) %></p>
+		<br>
+			<p><%= link_to 'Blog home', root_path %></p>
+			<p><%= link_to 'Edit post', edit_post_path(@post) %></p>
+			<p><%= link_to 'Delete post', post_path, :confirm => 'Please confirm you want to delete?', :method => :delete %></a></p>
+	</div>
+	
+	<div class="comment_area">
+		<br>
+		<p><strong>Comments:</strong></p>	
+		<%= render @post.comments %>
+		<br>
+	</div>
+	
+	<div class="comment_form">
+		<p><strong>Add a comment:</strong></p>	
+		<%= render 'comments/add_comment' %>
+	</div>
 
-		<%= render :partial => "comment", :collection => @comments %>	
-
-		<%= form_for @post do |f| %>
-			<%= f.fields_for :comments, @new_comment do |comment| %>
-					<%= comment.label :comment, "Comment" %>
-					<%= comment.text_field :comment %>
-			<% end %>
-			<%= f.submit "Submit comment" %>
-		<% end %>
-
-		<%= link_to 'Blog home', root_path %>
-		<%= link_to 'Edit post', edit_post_path(@post) %>
-		<%= link_to 'Delete post', @post, :confirm => 'Please confirm you want to delete?', :method => :delete %>
 </article>

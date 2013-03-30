@@ -1,16 +1,15 @@
 <div class="navbar navbar-inverse navbar-fixed-top" id="navbar">
 			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href=<%= root_path %>>Bloc Head</a>
+				<div class="container" id="nav_container">
+					<a class="brand" href=<%= root_path %>>Bloc Head Official Blog</a>
 					<div class ="nav-collapse collapse">
-						<ul class="nav">
+						<ul class="nav" id="nav_links">
 							<li class="active"><a href=<%= root_path %>>Home</a></li>
 							<li class="active"><a href=<%= new_post_path %>>New post</a></li>
 							<li class="active"><a href=<%= users_path%>>Community</a></li>
-							<li class="active"><a href=<%= about_path  %>>About</a></li>
 							<li class="active"><a href=<%= new_user_path %>>Sign up</a></li>
 						</ul>
-						<form class="navbar-form pull-right">
+						<form class="navbar-form pull-right" id="login_form">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
               <button type="submit" class="btn btn-primary" id="signin_button">Sign in</button>

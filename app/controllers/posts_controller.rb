@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+http_basic_authenticate_with :name => "dhh", :password => "secret", :except => [:index, :show]
+
   def index
   	@posts = Post.recent
   end
@@ -35,8 +38,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @new_comment = Comment.new
     @comments = @post.comments
+    
   end
 
   def destroy
