@@ -1,8 +1,10 @@
-	<h2><%= link_to post.title, post %><h2>
-	<h2><small><%= link_to  post.created_at.strftime("%B %d, %Y"), post %></small></h2>
-	<%= link_to image_tag("http://placehold.it/540x300"), post %>
-	<p><%= link_to post.body[0...200]+"...", post %></p>
+	<article>
+		<h2><%= link_to post.title, post %><h2>
+		<h2><small><%= link_to  post.created_at.strftime("%B %d, %Y"), post %></small></h2>
+		<%= link_to image_tag("http://placehold.it/540x300"), post %>
+		<p><%= link_to post.body[0...200]+"...", post %></p>
 
-	<a class="text-success"><%= link_to 'View post', post %></a>
-	<a class="text-warning"><%= link_to 'Edit post', edit_post_path(post) %></a>
-	<a class="text-error"><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></a>
+		<a class="text-success"><%= link_to 'View post', post %></a>
+		<a class="text-warning"><%= link_to 'Edit post', edit_post_path(post) %></a>
+		<a class="text-error"><%= link_to 'Delete post', post, :confirm => 'Please confirm you want to delete?', :method => :delete %></a>
+	</article>

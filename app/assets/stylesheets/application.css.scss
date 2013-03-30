@@ -12,3 +12,65 @@
  *= require_tree .
  */
 
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Aldrich);
+
+
+$bg-color: #fff;
+$font-contrast-color: #7df9ff;
+$main-font: Arial, Helvetica, sans-serif;
+
+#content {
+	margin-top: 50px;
+}
+
+body {
+	}
+
+#home_container {
+	background-color: $bg-color;
+	margin: 0px;
+	margin-top: 200px;
+	padding: 20px;
+
+}
+
+.nav, .brand, article h2 {
+	font-family: 'Aldrich', sans-serif;
+}
+
+p {
+	font-weight: 300;
+}
+
+#sidebar {
+	border: 0px solid #B5B5B5; 
+	border-left: 0px;
+	padding:45px;
+	padding-top: 12.5%;
+	position: fixed;
+	height: 100%;
+	width: 400px;
+	top: 0;
+	left: -41px;
+	background-image:url(image_path('micro_carbon.png'));
+}
+
+#sidebar p {
+	font-weight: 300;
+	color: gray;
+}
+
+#sidebar h2 {
+	font-family: 'Aldrich', sans-serif;
+	font-size: 1.5em;
+	color: $font-contrast-color;
+}
+
+article {
+	margin-top: 50px;		
+}
+
+#home_container {
+	margin-top:20px;
+}

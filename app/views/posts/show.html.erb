@@ -1,10 +1,12 @@
-<div class="row-fluid">
-	<div class="span6 offset3">
-		<h2><%= @post.title %></h2>
-		<p><%= @post.user %></p>
-		<p><%= @post.tag %></p>
-		<p><%= @post.body %></p>
-		
+<article>
+	<h2><%= @post.title %><h2>
+	<h2><small><%= @post.created_at.strftime("%B %d, %Y") %></small></h2>
+	<%= image_tag("http://placehold.it/540x300") %>
+	<p><%= @post.body[0...200]+"..." %></p>
+
+	<a class="text-warning"><%= link_to 'Edit post', edit_post_path(@post) %></a>
+	<a class="text-error"><%= link_to 'Delete post', post_path, :confirm => 'Please confirm you want to delete?', :method => :delete %></a>
+
 		<%= render :partial => "comment", :collection => @comments %>	
 
 		<%= form_for @post do |f| %>
@@ -18,5 +20,4 @@
 		<%= link_to 'Blog home', root_path %>
 		<%= link_to 'Edit post', edit_post_path(@post) %>
 		<%= link_to 'Delete post', @post, :confirm => 'Please confirm you want to delete?', :method => :delete %>
-	</div>
-</div>
+</article>

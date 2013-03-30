@@ -11,9 +11,10 @@ Todos:
 		- fix controller
 		- fix functionality in posts view
 
-
 	Likes
 		- set them up from scratch
 
 	Public
-		- quick fix of about page
+		- delete about page
+		-delete about link in navbar
+		-destroy public controller
