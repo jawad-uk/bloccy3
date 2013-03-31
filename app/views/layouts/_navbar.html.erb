@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top" id="navbar">
 			<div class="navbar-inner">
 				<div class="container" id="nav_container">
-					<a class="brand" href=<%= root_path %>>Bloc Head Official Blog</a>
+					<a class="brand" id="logo" href=<%= root_path %>>Bloc Head Official Blog</a>
 					<div class ="nav-collapse collapse">
 						<ul class="nav" id="nav_links">
 							<li class="active"><a href=<%= root_path %>>Home</a></li>
@@ -9,11 +9,16 @@
 							<li class="active"><a href=<%= users_path%>>Community</a></li>
 							<li class="active"><a href=<%= new_user_path %>>Sign up</a></li>
 						</ul>
-						<form class="navbar-form pull-right" id="login_form">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn btn-primary" id="signin_button">Sign in</button>
-          	</form>
+						<div class="navbar-form pull-right" id="login_form">
+            	<% if user_signed_in? %>
+	            	Logged in as <strong><%= current_user.email %></strong>.
+	            	<%= link_to 'Edit profile', edit_user_registration_path %> |
+	            	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+							<% else %>
+								<%= link_to "Sign_up", new_user_registration_path %> |
+								<%= link_to "Login", new_user_session_path %>
+							<% end %>
+          	</div>
 					</div>
 				</div>
 			</div>

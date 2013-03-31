@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem "nifty-generators", :group => :development
 
 gem 'devise'
+gem 'cancan'
 
 
 # To use ActiveModel has_secure_password

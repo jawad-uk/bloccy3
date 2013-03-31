@@ -54,6 +54,7 @@ p {
 	top: 0;
 	left: -41px;
 	background-image:url(image_path('micro_carbon.png'));
+	z-index: 1000;
 }
 
 #sidebar p {
@@ -80,9 +81,25 @@ article {
 }
 
 #nav_links {
-	margin-left: 350px;
+	margin-left: 300px;
 }
 
 #login_form {
 	margin-right: 20px;
+	margin-top: 8px;
+	color: white;
+}
+
+#logo {
+	margin-left: 28px;
+}
+
+#logo_big {
+	font-size: 4.2em;
+}
+
+#alerts {
+	font-size: 1.5em;
+	color: red;
+	margin-top: 10px;
 }

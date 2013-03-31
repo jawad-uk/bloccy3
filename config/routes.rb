@@ -1,5 +1,7 @@
 Bloccy3::Application.routes.draw do
 
+devise_for :users
+
 resources :posts do
   resources :comments
 end
@@ -8,8 +10,6 @@ end
 resources :users do 
   resources :posts, only: [:index, :show]
 end
-
-match '/about' => 'public#about'
 
 root :to => 'posts#index'
 

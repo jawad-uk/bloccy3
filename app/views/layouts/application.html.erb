@@ -4,17 +4,20 @@
 	  <title>Bloccy3</title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
-	  <%= csrf_meta_tags %>
+	  <%= csrf_meta_tags %>  
 	</head>
 	
 	<body>
 		<%= render :partial => "layouts/navbar" %>
-		
 		<div class="container-fluid" id="home_container">
       <div class="row-fluid">
         <div class="span9" id="sub_container">
           <div class="row-fluid">
             <div class="span6 offset5">
+            	<div id="alerts">
+								<p><strong><%= notice %></strong></p>
+					    	<p><strong><%= alert %></strong></p>
+					  	</div>
 							<%= yield %>							
 						</div>
 					</div>
