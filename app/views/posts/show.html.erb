@@ -6,24 +6,27 @@
 			<p><%= @post.body %></p>
 			<p><b>Tags: </b><%= join_tags(@post) %></p>
 			<p><%= link_to 'Blog home', root_path %></p>
-		
-			<p><%= link_to 'Edit post', edit_post_path(@post) %></p>
-		
-		
+			<% if can? :update, @post %>
+				<p><%= link_to 'Edit post', edit_post_path(@post) %></p>
+			<% end %>
+			<% if can? :destroy, @post %>
 			<p><%= link_to 'Delete post', post_path, :confirm => 'Please confirm you want to delete?', :method => :delete %></a></p>
-		
+			<% end %>
 	</div>
 	
+	<% if @post.comments.count > 0 %>
 	<div class="comment_area">
 		<br>
 		<p><strong>Comments:</strong></p>		
 		<%= render @post.comments %>
 		<br>
 	</div>
+	<% end %>
 	
+	<% if can? :create, @comment %>
 	<div class="comment_form">
 		<p><strong>Add a comment:</strong></p>	
 		<%= render 'comments/add_comment' %>
 	</div>
-
+	<% end %>
 </article>

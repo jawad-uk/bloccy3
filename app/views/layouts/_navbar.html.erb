@@ -5,9 +5,9 @@
 					<div class ="nav-collapse collapse">
 						<ul class="nav" id="nav_links">
 							<li class="active"><a href=<%= root_path %>>Home</a></li>
-						
+							<% if can? :create, @post %>	
 								<li class="active"><a href=<%= new_post_path %>>New post</a></li>
-						
+							<% end %>
 							<li class="active"><a href=<%= users_path%>>Community</a></li>
 							<li class="active"><a href=<%= new_user_registration_path %>>Sign up</a></li>
 						</ul>
