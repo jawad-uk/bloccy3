@@ -6,8 +6,9 @@
   <h6><small><% comment.created_at.strftime("%B %d, %Y") %></small><h6>
 </div>
 
-<p class="admin_links">
-	<%= link_to 'Delete Comment', [comment.post, comment],
-							:confirm => 'Are you sure?',
-							:method => :delete %>
-</p>
+	<p class="admin_links">
+			<%= link_to 'Delete Comment', [comment.post, comment],
+									:confirm => 'Are you sure?',
+									:method => :delete %>
+	</p>
+

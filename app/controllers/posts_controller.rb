@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_filter :authenticate_user!, except: [:index, :show]
+  #before_filter :authenticate_user!, except: [:index, :show]
 
   def index
   	@posts = Post.recent
@@ -23,6 +23,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+
+
   end
 
   def create
@@ -49,6 +51,7 @@ class PostsController < ApplicationController
     else
         flash[:error] = "Error deleting post"
         redirect_to @post
+
     end
   end
 end
