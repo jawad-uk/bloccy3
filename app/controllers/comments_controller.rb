@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
 
   before_filter :authenticate_user!
 
+  respond_to do |format|
+    format.js
+  end
+  
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(params[:comment])

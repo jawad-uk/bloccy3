@@ -23,11 +23,15 @@ end
 
 gem 'jquery-rails'
 
-gem "nifty-generators", :group => :development
+gem 'nifty-generators', :group => :development
+gem 'simple_form'
 
 gem 'devise'
 gem 'cancan'
-
+gem 'rspec-rails'
+gem 'guard-rspec'
+gem 'capybara'
+gem 'guard-spork'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
